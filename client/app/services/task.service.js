@@ -7,21 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var http_1 = require("@angular/http");
-var app_component_1 = require("./app.component");
-var tasks_component_1 = require("./components/tasks/tasks.component");
-var AppModule = /** @class */ (function () {
-    function AppModule() {
+require("rxjs/add/operator/map");
+var TaskService = /** @class */ (function () {
+    function TaskService() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, tasks_component_1.TasksComponent],
-            bootstrap: [app_component_1.AppComponent]
-        })
-    ], AppModule);
-    return AppModule;
+    TaskService = __decorate([
+        core_1.Injectable()
+    ], TaskService);
+    return TaskService;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.TaskService = TaskService;
+(console.log('Task Service Initialized...'));
+//# sourceMappingURL=task.service.js.map

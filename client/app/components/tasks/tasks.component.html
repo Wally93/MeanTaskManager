@@ -7,13 +7,13 @@
 <div class="task-list">
   <div *ngFor="let task of tasks">
       <div class="col-md-1">
-        <input type="checkbox" name="" value="">
+        <input type="checkbox" name="" value="" [checked]="task.isDone" (click)="updateStatus(task)">
       </div>
       <div class="col-md-7">
         {{task.title}}
       </div>
       <div class="col-md-4">
-        <input type="button" name="" value="Delete" class="btn btn-danger">
+        <input type="button" (click)="deleteTask(task._id)" name="" value="Delete" class="btn btn-danger">
       </div>
 </div>
 </div>

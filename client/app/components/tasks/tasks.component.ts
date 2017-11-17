@@ -8,7 +8,10 @@ import {TaskService} from '../../services/task.service';
 })
 
 export class TasksComponent {
-  constructor(private taskservice:TaskService){
-
+  constructor(private taskService:TaskService){
+      this.taskService.getTasks()
+          .subscribe(tasks => {
+              console.log(tasks);
+          })
   }
  }

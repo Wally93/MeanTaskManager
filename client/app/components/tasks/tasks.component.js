@@ -12,8 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var task_service_1 = require("../../services/task.service");
 var TasksComponent = /** @class */ (function () {
-    function TasksComponent(taskservice) {
-        this.taskservice = taskservice;
+    function TasksComponent(taskService) {
+        this.taskService = taskService;
+        this.taskService.getTasks()
+            .subscribe(function (tasks) {
+            console.log(tasks);
+        });
     }
     TasksComponent = __decorate([
         core_1.Component({

@@ -13,5 +13,8 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "mongojs": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.53"
   }
 }
